@@ -31,4 +31,4 @@ A simple password manager written in Python.
 This software is released under the MIT License. See LICENSE for details.
 
 ## Support
-[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/brentknickerbocker)
+[Buy Me a Coffee](https://ko-fi.com/brentknickerbocker)
