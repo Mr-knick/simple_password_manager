@@ -13,7 +13,7 @@ def test_password_data_init():
     assert pd._password_dict == {}
     assert pd._master_password == ""
     assert pd._passwords_visible == InputStyle.HIDDEN
-    assert pd._pass_validation
+    assert pd._skip_pass_validation
     assert pd._filepath == './pass.crypt'
 
 
@@ -29,6 +29,6 @@ def test_encrypt_decrypt_file(tmp_path):
 
 def test_password_data_initialization_workflow_no_file(tmp_path, monkeypatch):
     pd = PasswordData({'filepath': str(tmp_path / "test_file")})
-    monkeypatch.setattr('getpass.getpass', lambda _: 'test_password')
+    monkeypatch.setattr('getpass.getpass', lambda _: 'asdfASDF1234!@')
     pd.initialization_work_flow()
-    assert pd._master_password == 'test_password'
+    assert pd._master_password == 'asdfASDF1234!@'
